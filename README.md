@@ -59,6 +59,40 @@ com.example.notificacion
 
 ---
 
+## 🧪 Ejemplos de peticiones POST
+
+### Enviar notificación por EMAIL
+
+```json
+{
+  "canal": "EMAIL",
+  "destino": "usuario@gmail.com",
+  "mensaje": "Hola, este es un correo de prueba"
+}
+```
+
+### Enviar notificación por SMS
+
+```json
+{
+  "canal": "SMS",
+  "destino": "+573001112233",
+  "mensaje": "Mensaje corto para SMS"
+}
+```
+
+### Enviar notificación por WHATSAPP
+
+```json
+{
+  "canal": "WHATSAPP",
+  "destino": "+573223334455",
+  "mensaje": "Hola, este es un mensaje por WhatsApp"
+}
+```
+
+---
+
 ## 🧪 Cómo ejecutar el proyecto
 
 1. Clona el repositorio
