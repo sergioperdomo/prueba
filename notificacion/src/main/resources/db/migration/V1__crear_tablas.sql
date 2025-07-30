@@ -1,0 +1,13 @@
+CREATE TABLE canal (
+  nombre VARCHAR(100) PRIMARY KEY,
+  activo BOOLEAN NOT NULL
+);
+
+CREATE TABLE notificacion (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  canal VARCHAR(100) NOT NULL,
+  destino VARCHAR(255) NOT NULL,
+  mensaje VARCHAR(500),
+  estado VARCHAR(50),
+  fecha_envio TIMESTAMP
+);
