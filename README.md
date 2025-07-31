@@ -139,6 +139,13 @@ spring.jackson.time-zone=America/Bogota
 
 ---
 
+## 📊 Diagramas
+
+- Ver [Diagrama de Clases UML](/docs/diagrams/diagrama-clases-notificacion.puml)
+- Ver [Diagrama de Secuencia UML](/docs/diagrams/diagrama-secuencia-notificacion.puml)
+
+---
+
 ## ✍️ Autor
 
 Basado en el desarrollo del **Ingeniero Hector**.

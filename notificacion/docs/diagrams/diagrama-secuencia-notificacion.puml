@@ -1,0 +1,31 @@
+@startuml diagrama-secuencia-notificacion
+
+actor Cliente
+participant "NotificacionController" as Controller
+participant "NotificacionService" as Service
+participant "CanalService" as CanalService
+participant "CanalNotificacion\n(Strategy Interface)" as Strategy
+participant "EmailNotificacion\n/Sms/Whatsapp" as CanalImpl
+participant "NotificacionRepository" as Repo
+
+Cliente -> Controller : POST /api/enviarNotificacion(request)
+Controller -> Service : enviar(request)
+
+Service -> CanalService : estaActivo(request.canal)
+CanalService --> Service : boolean
+
+alt Canal activo
+    Service -> Strategy : filtra canal correspondiente
+    Service -> CanalImpl : enviar(request)
+    CanalImpl --> Service : Notificacion
+
+    Service -> Repo : save(Notificacion)
+    Repo --> Service : Notificacion guardada
+
+    Service --> Controller : Notificacion guardada
+    Controller --> Cliente : Response 200 OK
+else Canal inactivo
+    Service --> Controller : lanza CanalInactivoException
+    Controller --> Cliente : Response 500
+end
+@enduml

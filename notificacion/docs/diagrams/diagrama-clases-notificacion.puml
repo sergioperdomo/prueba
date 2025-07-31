@@ -1,0 +1,69 @@
+@startuml diagrama-clases-notificacion
+
+class Notificacion {
+    - Long id
+    - String canal
+    - String destino
+    - String mensaje
+    - String estado
+    - LocalDateTime fechaEnvio
+}
+
+class Canal {
+    - String nombre
+    - boolean activo
+}
+
+class EnvioNotificacionRequest {
+    - String canal
+    - String destino
+    - String mensaje
+}
+
+interface NotificacionRepository
+interface CanalRepository
+
+class NotificacionService {
+    + enviar(request: EnvioNotificacionRequest): Notificacion
+    + obtenerHistorial(): List<Notificacion>
+}
+
+class CanalService {
+    + obtenerActivos(): List<Canal>
+    + estaActivo(canal: String): boolean
+}
+
+interface CanalNotificacion {
+    + getTipo(): String
+    + enviar(request: EnvioNotificacionRequest): Notificacion
+}
+
+class EmailNotificacion
+class SmsNotificacion
+class WhatsappNotificacion
+
+CanalNotificacion <|.. EmailNotificacion
+CanalNotificacion <|.. SmsNotificacion
+CanalNotificacion <|.. WhatsappNotificacion
+
+
+class NotificacionController {
+    + obtenerCanalesActivos(): List<Canal>
+    + enviarNotificacion(request: EnvioNotificacionRequest): Notificacion
+    + obtenerReporteEnvios(): List<Notificacion>
+}
+
+
+class ValidacionException
+class CanalNoSoportadoException
+class CanalInactivoException
+
+
+NotificacionController --> NotificacionService
+NotificacionController --> CanalService
+NotificacionService --> NotificacionRepository
+NotificacionService --> CanalService
+NotificacionService --> CanalNotificacion
+CanalService --> CanalRepository
+
+@enduml
