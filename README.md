@@ -141,8 +141,11 @@ spring.jackson.time-zone=America/Bogota
 
 ## 📊 Diagramas
 
-- Ver [Diagrama de Clases UML](/docs/diagrams/diagrama-clases-notificacion.puml)
-- Ver [Diagrama de Secuencia UML](/docs/diagrams/diagrama-secuencia-notificacion.puml)
+### 🔎 Diagramas
+
+- [Ver Diagrama de Clases UML](https://www.plantuml.com/plantuml/png/fLHDJm8n4BttL_I88SiF88PWa4GJuq68deVk06EwxTfMeb7_kztk0ksowqVehJElRrvVPygcre5nhuNaES76G06Pa63HPaexMfC0GLenLWKjluzY_8Dnlp9-fzM6Kzxi5iwGtmjG8DDGZjQHqccmG6NX6TEW1qAk3_G2v3KuN5A1V8rY2tEr8ys-zgfcLQs3d8P3wM9bzhmhhIM2uY0SxQAJWIY-r0E-lFhgRRB_tiON8ENGh44WJ_bBRSbfynu1Wlueqs7s0isEFBJMDUJeXOCPc5hkkFSY5-E4fZcjLmuLcXkolXw177ZOdTzSnjX9o-2sX8RaAbXg3nG1EzdBz0zP0mR1md5Zb0StJv9Q5GvtDDcGRz0jgTHLcPhYJ2EEBL009IMR-AAm7T6dBJWBPPcasAdioy_Hg8Ew1zYkrGFhBdxQB3EjdD5Ieca_LY16-_ER1KTZlZFRhEfiup2SjR-rsYD8oaDm_YQmT4Vh6rCMkcBptqDd_bRL8tvCiXvdicpIDM4_mUCnO5tJsUQCPheF_YVEatvWoKGU8F4VCaML-s-TVGC0)
+
+- [Ver Diagrama de Secuencia UML](https://www.plantuml.com/plantuml/png/XP31JiCm38RlVOOip63hD4q4A84aH0MI7yZglXBMGzz_7Q66vPl0UCMEzGa8NGoRTiUxa-VhOYXz-JRxMJl-QjLd2VPK7wRoL_a9ym31kIEmbdcPyKsw7rLplmBuw_CnDeIck-KTeYqXtJHNTN3FhGHSiRQOgmduo8BJ7p9P_-zPwj-xMkSIXil06ZnG2Iu4RzD97OShLfglFHRpbHZm00)
 
 ---
 
